@@ -1,0 +1,93 @@
+/* Heart container styling */
+.heart-container {
+    position: fixed;  /* Fix hearts on the screen */
+    top: 0;
+    left: 0;
+    width: 100vw;   /* Full viewport width */
+    height: 100vh;  /* Full viewport height */
+    pointer-events: none; /* Hearts won't block interactions */
+    z-index: 1;  /* Ensure hearts stay behind main content */
+    overflow: hidden; /* Prevent hearts from overflowing outside the screen */
+  }
+  
+  /* Heart styling */
+  .heart {
+    position: absolute;
+    font-size: 30px; /* Heart size */
+    color: #ff1493; /* Bright pink color */
+    opacity: 0;  /* Invisible initially */
+    animation: float 5s infinite ease-in-out; /* Floating animation */
+    pointer-events: none;  /* Make hearts unclickable */
+  }
+  
+  /* Heart animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-200px) scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(400px) scale(1);
+      opacity: 0;
+    }
+  }
+
+/* Center the content vertically and horizontally */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: rgb(255, 0, 0);
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: lucida calligraphy;
+  }
+  
+  button {
+    padding: 15px 40px;
+    font-size: 22px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Styling for Yes button */
+  .yes-btn {
+    background-color: #ff69b4; /* Hot pink */
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+    margin-bottom: 20px; /* Space between Yes and No button */
+  }
+  
+  .yes-btn:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+  }
+  
+  /* Styling for No button */
+  .no-btn {
+    background-color: rgb(255, 0, 0); /* Tomato red */
+    position: absolute; /* Allows it to move freely on the screen */
+    z-index: 0;
+    box-shadow: 0 5px 15px rgba(255, 99, 71, 0.4);
+    margin-top: 300px;
+  }
+  
+  .no-btn:hover {
+    background-color: #5a1319; /* Darker red on hover */
+    transform: scale(1.1);
+  }
+  

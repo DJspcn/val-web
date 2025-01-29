@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Hi Cyriz! <br>Will you be my Valentine?</h1>
+    <button class="yes-btn" (click)="goToThankYou()">Yes!</button>
+    <button class="no-btn" (mouseover)="moveButton($event)" (click)="noClicked()">No :(</button>
+  </div>
+  
+  <!-- Heart Animation Container -->
+<div class="heart-container">
+    <div class="heart" *ngFor="let heart of hearts" [ngStyle]="{
+        'left': heart.left, 
+        'animation-delay': heart.animationDelay, 
+        'animation-duration': heart.animationDuration
+    }">
+      ❤️
+    </div>
+  </div>

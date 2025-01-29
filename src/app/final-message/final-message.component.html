@@ -1,0 +1,28 @@
+<div class="message-container">
+  <h1>Happy Valentine's ❤️</h1>
+  <p>
+    Happy Valentine's Day bb!
+    I just want you to know how much I care about you. Every second
+    we're apart there's not a moment that I don't miss you. <br>I hope this
+    fun little surprise makes your day! I love you so much, and I fall in
+    love a little more each day.
+  </p>
+  <span class="signature"><br />~ Love, Daryl </span>
+</div>
+
+<button (click)="goBack()">Go Back</button>
+
+<!-- Heart Animation Container -->
+<div class="heart-container">
+  <div
+    class="heart"
+    *ngFor="let heart of hearts"
+    [ngStyle]="{
+      left: heart.left,
+      'animation-delay': heart.animationDelay,
+      'animation-duration': heart.animationDuration
+    }"
+  >
+    ❤️
+  </div>
+</div>

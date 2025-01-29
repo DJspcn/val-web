@@ -1,0 +1,85 @@
+/* Heart container styling */
+.heart-container {
+    position: fixed;  /* Fix hearts on the screen */
+    top: 0;
+    left: 0;
+    width: 100vw;   /* Full viewport width */
+    height: 100vh;  /* Full viewport height */
+    pointer-events: none; /* Hearts won't block interactions */
+    z-index: 0;  /* Ensure hearts stay behind main content */
+    overflow: hidden; /* Prevent hearts from overflowing outside the screen */
+  }
+  
+  /* Heart styling */
+  .heart {
+    position: absolute;
+    font-size: 30px; /* Heart size */
+    color: #ff1493; /* Bright pink color */
+    opacity: 0;  /* Invisible initially */
+    animation: float 5s infinite ease-in-out; /* Floating animation */
+    pointer-events: none;  /* Make hearts unclickable */
+  }
+  
+  /* Heart animation */
+  @keyframes float {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-200px) scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(400px) scale(1);
+      opacity: 0;
+    }
+  }
+
+  .message-container {
+    position: fixed;  /* Fix it to the viewport */
+    top: 50%;  /* Position it at the middle vertically */
+    left: 50%;  /* Position it at the middle horizontally */
+    transform: translate(-50%, -50%);  /* Offset by half its width and height */
+    text-align: center;
+    padding: 30px;
+    background-color: whitesmoke;
+    width: 700px;
+    border-radius: 10px;
+    color: black;
+    font-size: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;  /* Ensure it stays above other elements */
+}
+
+h1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: lucida calligraphy;
+    color: rgb(255, 0, 0);
+}
+
+.signature{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: lucida calligraphy;
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    margin-right: 400px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 22px;
+    color: white;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  
+  button:hover {
+    background-color: #ff1493;
+  }

@@ -1,0 +1,33 @@
+<div class="message-container">
+    <p>
+      These pictures are some of the most special memories we have and I
+      will treasure them inside my heart forever
+    </p>
+  </div>
+  
+<div class="gallery-container">
+  <h1>Our Special Moments</h1>
+  <div class="gallery">
+    <div class="image-item" *ngFor="let image of images">
+      <img [src]="image" alt="Gallery Image" />
+    </div>
+  </div>
+  <button (click)="goBack()">Go Back</button>
+  <button (click)="goToMessage()">Proceed to Message</button>
+</div>
+
+
+<!-- Heart Animation Container -->
+<div class="heart-container">
+  <div
+    class="heart"
+    *ngFor="let heart of hearts"
+    [ngStyle]="{
+      left: heart.left,
+      'animation-delay': heart.animationDelay,
+      'animation-duration': heart.animationDuration
+    }"
+  >
+    ❤️
+  </div>
+</div>

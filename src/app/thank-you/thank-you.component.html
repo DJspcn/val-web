@@ -1,0 +1,18 @@
+<div class="thank-you-container">
+    <h1>Thank you for being my Valentine! 💖</h1>
+    <p>I'd like to share some of our memories with you on this special day!</p>
+    <button (click)="proceedToGallery()">Proceed to Gallery</button>
+    <button (click)="goBack()">Go Back</button>
+  </div>
+
+    <!-- Heart Animation Container -->
+<div class="heart-container">
+    <div class="heart" *ngFor="let heart of hearts" [ngStyle]="{
+        'left': heart.left, 
+        'animation-delay': heart.animationDelay, 
+        'animation-duration': heart.animationDuration
+    }">
+      ❤️
+    </div>
+  </div>
+  
