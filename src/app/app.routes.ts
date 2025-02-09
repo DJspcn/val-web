@@ -5,6 +5,7 @@ import { ThankYouComponent } from './thank-you/thank-you.component'; // Import T
 import { IntroComponent } from './intro/intro.component'; // Import Intro component
 import { GalleryComponent } from './gallery/gallery.component';
 import { FinalMessageComponent } from './final-message/final-message.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 export const routes: Routes = [
@@ -16,6 +17,7 @@ export const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]
 })
 export class AppRoutingModule { }
